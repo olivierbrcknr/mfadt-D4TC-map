@@ -11,14 +11,15 @@
   "dependencies": {
     "@svgr/webpack": "^5.4.0",
     "@zeit/next-css": "^1.0.1",
-    "next": "^9.4.2",
+    "next": "^9.5.3",
     "react": "^16.13.1",
-    "react-dom": "16.13.1",
-    "webpack": "^4.43.0"
+    "react-dom": "^16.13.1",
+    "webpack": "^4.44.2"
   },
   "devDependencies": {
-    "file-loader": "^6.0.0",
+    "file-loader": "^6.1.0",
     "raw-loader": "^4.0.1",
-    "url-loader": "^4.1.0"
+    "url-loader": "^4.1.0",
+    "yarn-upgrade-all": "^0.5.4"
   }
 }
