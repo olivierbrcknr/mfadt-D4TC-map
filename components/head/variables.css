@@ -1,0 +1,28 @@
+:root {
+  /* Typography */
+  --font-family-reg:  'Roboto', sans-serif;
+  --font-family-mono:  'Roboto Mono', monospace;
+
+  /* Colors */
+  --color-white: #FFF;
+  --color-black: #000;
+
+  --color-gray-med: #A7A9AC;
+
+  --color-blue: #0085FF;
+
+  --color-highlight: var(--color-blue);
+
+  /* Sizes */
+  --grid-unit: 8px;
+  --max-width: 1200px;
+
+}
+
+
+/*@media (prefers-color-scheme: dark) {
+  :root {
+    --color-white: #000;
+    --color-black: #FFF;
+  }
+}*/
