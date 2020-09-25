@@ -3,6 +3,8 @@ import Link from 'next/link'
 
 import './MapCountry.css';
 
+import {latLongToPixelMercartor,mapValues} from '../utils'
+
 const MapCountry = (props) => {
 
   let classes = ['MapCountry'];
@@ -14,10 +16,23 @@ const MapCountry = (props) => {
 
   const countryInfo = props.countryInfo;
 
-  const fromTop = mapRange( countryInfo["Latitude (average)"], europLatMin, europLatMax, 95, 5 );
-  const fromLeft = mapRange( countryInfo["Longitude (average)"], europLngMin, europLngMax, 5, 95 );
 
-  console.log(countryInfo['Country'],fromLeft)
+  let latitude    = countryInfo["Latitude (average)"]; // (φ)
+  let longitude   = countryInfo["Longitude (average)"];   // (λ)
+
+  let mapWidth = mapValues( 360, 0, europLngMax-europLngMin, 0, 100 );
+  let mapHeight = mapValues( 360, 0, europLatMax-europLatMin, 0, 100 );
+
+  console.log(mapHeight,europLatMax-europLatMin)
+
+  let leftAdjust = ((180 + europLngMin) / 360);
+  let topAdjust = (mapHeight/2)-(mapWidth*Math.log(Math.tan((Math.PI/4)+(europLatMax*Math.PI/180/2)))/(2*Math.PI))
+
+  let fromLeft = (longitude+180)*(mapWidth/360) - leftAdjust*mapWidth;
+  let latRad = latitude*Math.PI/180;
+
+  let mercN = Math.log(Math.tan((Math.PI/4)+(latRad/2)));
+  let fromTop = (mapHeight/2)-(mapWidth*mercN/(2*Math.PI)) - topAdjust;
 
   let styleAdjustments = {
     left: fromLeft + '%',
@@ -36,9 +51,3 @@ const MapCountry = (props) => {
 }
 
 export default MapCountry
-
-
-function mapRange (value, a, b, c, d) {
-  value = (value - a) / (b - a);
-  return c + value * (d - c);
-}

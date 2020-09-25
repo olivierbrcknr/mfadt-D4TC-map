@@ -24,3 +24,7 @@ yarn-error.log*
 .env.build
 
 .vercel
+
+
+
+/components/Map_G
