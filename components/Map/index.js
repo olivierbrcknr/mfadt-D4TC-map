@@ -6,7 +6,10 @@ import MapEqualizerToggle from '../MapEqualizerToggle'
 
 import './Map.css';
 
-import counties from './latLong.js'
+import countriesLatLong from '../data/latLong.js'
+import totalPopulation from '../data/totalPopulation.js'
+import gdp from '../data/gdp.js'
+import refugeesInCountry from '../data/refugee.js'
 
 
 const europLngMin = -28;
@@ -29,13 +32,44 @@ const DataVizMap = (props) => {
 
   let classes = ['DataVizMap'];
 
-  let dataPoints = counties.map( (country,index)=>{
+  let dataPoints = countriesLatLong.map( (country,index)=>{
 
     if( europLatMin < country["Latitude (average)"] && country["Latitude (average)"] < europLatMax ){
       if( europLngMin < country["Longitude (average)"] && country["Longitude (average)"] < europLngMax ){
         // console.log( country["Country"] )
+
+        let countryCode = country["Alpha-3 code"];
+
+        const totalPopCountryElement = totalPopulation.find(element => (
+          element["Country Code"] === countryCode
+        ));
+        const gdpElement = gdp.find(element => (
+          element["Country Code"] === countryCode
+        ));
+        const refugeeElement = refugeesInCountry.find(element => (
+          element["Country Code"] === countryCode
+        ));
+
+        let totalPopCountry = 0;
+        let countryGDP = 0;
+        let acceptedRefugees = 0;
+
+        if(totalPopCountryElement){
+          totalPopCountry = totalPopCountryElement[mapState.year];
+        }
+        if(gdpElement){
+          countryGDP = gdpElement[mapState.year];
+        }
+        if(refugeeElement){
+          acceptedRefugees = refugeeElement[mapState.year];
+        }
+
         return <MapCountry
-          key={country["Alpha-3 code"]}
+          totalPopulation={totalPopCountry}
+          gdp={countryGDP}
+          key={countryCode}
+          year={mapState.year}
+          refugees={acceptedRefugees}
           countryInfo={country}
           latLongVals={[europLngMin,europLngMax,europLatMin,europLatMax]} />;
       }
@@ -52,16 +86,23 @@ const DataVizMap = (props) => {
 
         {dataPoints}
 
-       </div>
+        <div className="DataVizMap-SizeLabel">
+          <div className="DataVizMap-SizeLabel-Number">
+            500km
+          </div>
+          <div className="DataVizMap-SizeLabel-Length"></div>
+        </div>
 
-       <MapTimeSelector
-        possibleTimes={possibleTimes}
-        selection={mapState.year}
-        callback={(y) => setMapState({...mapState,year: y}) } />
+     </div>
 
-      <MapEqualizerToggle
-        toggleState={mapState.isEqualized}
-        callback={(e) => setMapState({...mapState,isEqualized: e}) } />
+     <MapTimeSelector
+      possibleTimes={possibleTimes}
+      selection={mapState.year}
+      callback={(y) => setMapState({...mapState,year: y}) } />
+
+    <MapEqualizerToggle
+      toggleState={mapState.isEqualized}
+      callback={(e) => setMapState({...mapState,isEqualized: e}) } />
 
     </div>
   )

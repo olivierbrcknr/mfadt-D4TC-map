@@ -1,4 +1,4 @@
-const countries = [
+const countriesLatLong = [
   {
     "Country": "Afghanistan",
     "Alpha-2 code": "AF",
@@ -1945,4 +1945,4 @@ const countries = [
   }
 ]
 
-export default countries;
+export default countriesLatLong;

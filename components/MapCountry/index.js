@@ -2,46 +2,48 @@ import React from 'react'
 
 import './MapCountry.css';
 
-import {latLongToPixelMercartor,mapValues} from '../utils'
+import {latLongToPixelMercartor,mapValues,colorMixer} from '../utils'
+
 
 const MapCountry = (props) => {
 
   let classes = ['MapCountry'];
 
-  const europLngMin = props.latLongVals[0];
-  const europLngMax = props.latLongVals[1];
-  const europLatMin = props.latLongVals[2];
-  const europLatMax = props.latLongVals[3];
-
   const countryInfo = props.countryInfo;
+  const position = latLongToPixelMercartor( props.latLongVals, countryInfo["Latitude (average)"], countryInfo["Longitude (average)"] )
 
 
-  let latitude    = countryInfo["Latitude (average)"]; // (φ)
-  let longitude   = countryInfo["Longitude (average)"];   // (λ)
+  let ppp = props.gdp / props.totalPopulation;
 
-  let mapWidth = mapValues( 360, 0, europLngMax-europLngMin, 0, 100 );
-  let mapHeight = mapValues( 360, 0, europLatMax-europLatMin, 0, 100 );
+  let size = mapValues( ppp, 0, 1000000, 10, 100,);
 
-  let leftAdjust = ((180 + europLngMin) / 360);
-  let topAdjust = (mapHeight/2)-(mapWidth*Math.log(Math.tan((Math.PI/4)+(europLatMax*Math.PI/180/2)))/(2*Math.PI))
+  if( size > 50 ){
+    size = 50;
+  }
 
-  let fromLeft = (longitude+180)*(mapWidth/360) - leftAdjust*mapWidth;
-  let latRad = latitude*Math.PI/180;
+  let percent = props.refugees / (props.totalPopulation/100);
 
-  let mercN = Math.log(Math.tan((Math.PI/4)+(latRad/2)));
-  let fromTop = (mapHeight/2)-(mapWidth*mercN/(2*Math.PI)) - topAdjust;
+  let color = colorMixer('#0085FF','#D88A28', percent);
 
   let styleAdjustments = {
-    left: fromLeft + '%',
-    top: fromTop + '%'
+    left: position.left + '%',
+    top: position.top + '%',
+    width: size + 'px',
+    height: size + 'px',
+    background: color
   };
 
   return (
     <div className={classes.join(' ')} style={styleAdjustments}>
 
+      <div className="MapCountry-CursorMinSelection"></div>
 
       <div className="MapCountry-HoverInfo">
-        {countryInfo.Country}
+        <div>{countryInfo.Country} <span>{props.year}</span></div><br/>
+        GDP: {props.gdp} US$ <br/>
+        Population: {props.totalPopulation} <br/>
+        Refugees: {props.refugees} <br/>
+        Percent of Population: {percent}
       </div>
     </div>
   )
