@@ -33,6 +33,13 @@ const MapCountry = (props) => {
     background: color
   };
 
+  if( position.top > 80 ){
+    classes.push('--isVeryLow');
+  }
+  if( position.left > 80 ){
+    classes.push('--isFarRight');
+  }
+
   return (
     <div className={classes.join(' ')} style={styleAdjustments}>
 

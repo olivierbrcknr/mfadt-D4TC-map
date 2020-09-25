@@ -2,7 +2,7 @@
   display: flex;
   background: var(--color-white);
   position: absolute;
-  bottom: var(--grid-unit);
+  top: 60px;
   left: 50%;
   transform: translateX(-50%);
   border-radius: 4px;

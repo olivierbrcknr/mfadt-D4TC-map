@@ -38,3 +38,13 @@
   display: block;
   z-index: 5;
 }
+
+.MapCountry.--isVeryLow .MapCountry-HoverInfo {
+  top: initial;
+  bottom: calc( 100% + 4px );
+}
+
+.MapCountry.--isFarRight .MapCountry-HoverInfo {
+  left: initial;
+  right: 0;
+}
