@@ -1,5 +1,4 @@
 import React from 'react'
-import Link from 'next/link'
 
 import './MapCountry.css';
 
@@ -22,8 +21,6 @@ const MapCountry = (props) => {
 
   let mapWidth = mapValues( 360, 0, europLngMax-europLngMin, 0, 100 );
   let mapHeight = mapValues( 360, 0, europLatMax-europLatMin, 0, 100 );
-
-  console.log(mapHeight,europLatMax-europLatMin)
 
   let leftAdjust = ((180 + europLngMin) / 360);
   let topAdjust = (mapHeight/2)-(mapWidth*Math.log(Math.tan((Math.PI/4)+(europLatMax*Math.PI/180/2)))/(2*Math.PI))

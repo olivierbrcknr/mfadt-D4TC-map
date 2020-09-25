@@ -1,0 +1,29 @@
+.MapTimeSelector {
+  display: flex;
+  background: var(--color-white);
+  position: absolute;
+  top: var(--grid-unit);
+  left: 50%;
+  transform: translateX(-50%);
+  border-radius: 4px;
+  box-shadow: 0px 0px 10px rgba(0,0,0,0.1);
+}
+
+.MapTimeSelector-year {
+  cursor: pointer;
+  color: var(--color-gray-med);
+  padding: 6px 10px;
+}
+
+.MapTimeSelector-year:last-child {
+  border-left: solid 1px var(--color-gray-light);
+}
+
+.MapTimeSelector-year:hover {
+  color: var(--color-black);
+}
+
+
+.MapTimeSelector-year.--isSelected {
+  color: var(--color-highlight) !important;
+}

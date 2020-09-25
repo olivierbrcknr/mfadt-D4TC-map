@@ -1,7 +1,8 @@
-import React from 'react'
-import Link from 'next/link'
+import React, { useEffect, useState} from 'react'
 
 import MapCountry from '../MapCountry'
+import MapTimeSelector from '../MapTimeSelector'
+import MapEqualizerToggle from '../MapEqualizerToggle'
 
 import './Map.css';
 
@@ -13,7 +14,18 @@ const europLngMax = 46;
 const europLatMin = 30;
 const europLatMax = 72.1;
 
+const possibleTimes = [2015,2016,2017,2018,2019,2025];
+
 const DataVizMap = (props) => {
+
+  const [mapState,setMapState] = useState({
+    year: possibleTimes[0],
+    isEqualized: false
+  });
+
+  useEffect(()=>{
+    console.log(mapState)
+  },[mapState])
 
   let classes = ['DataVizMap'];
 
@@ -30,20 +42,6 @@ const DataVizMap = (props) => {
     }
   });
 
-  let latLines = [];
-
-  for( let i = 0; i < europLatMax - europLatMin; i++ ){
-    let percent = i / (europLatMax - europLatMin) * 100 + '%';
-    latLines.push( <div className="latLine" style={{top: percent}}>{europLatMin+i}</div> )
-  }
-
-  let lngLines = [];
-
-  for( let i = 0; i < europLngMax - europLngMin; i++ ){
-    let percent = i / (europLngMax - europLngMin) * 100 + '%';
-    latLines.push( <div className="lngLine" style={{left: percent}}>{europLngMin+i}</div> )
-  }
-
 
   return (
     <div className={classes.join(' ')}>
@@ -55,6 +53,15 @@ const DataVizMap = (props) => {
         {dataPoints}
 
        </div>
+
+       <MapTimeSelector
+        possibleTimes={possibleTimes}
+        selection={mapState.year}
+        callback={(y) => setMapState({...mapState,year: y}) } />
+
+      <MapEqualizerToggle
+        toggleState={mapState.isEqualized}
+        callback={(e) => setMapState({...mapState,isEqualized: e}) } />
 
     </div>
   )

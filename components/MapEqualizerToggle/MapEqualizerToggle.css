@@ -1,0 +1,26 @@
+.MapEqualizerToggle {
+  display: flex;
+  background: var(--color-white);
+  position: absolute;
+  bottom: var(--grid-unit);
+  left: 50%;
+  transform: translateX(-50%);
+  border-radius: 4px;
+  box-shadow: 0px 0px 10px rgba(0,0,0,0.1);
+  padding: 2px;
+}
+
+
+.MapEqualizerToggle li {
+  display: block;
+  border-radius: 2px;
+  padding: 2px 5px;
+  cursor: pointer;
+  color: var(--color-gray-med);
+}
+
+
+.MapEqualizerToggle li.--isToggled {
+  background: var(--color-highlight);
+  color: var(--color-white);
+}

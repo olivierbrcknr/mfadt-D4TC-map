@@ -6,6 +6,7 @@
   bottom: 0;
   left: 500px;
   overflow: hidden;
+  user-select: none !important;
 
 }
 
