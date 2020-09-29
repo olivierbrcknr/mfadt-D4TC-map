@@ -9,10 +9,10 @@ const MapEqualizerToggle = (props) => {
   return (
     <ul className={classes.join(' ')} onClick={ () => props.callback(!props.toggleState) }>
 
-      <li className={( props.toggleState ? '--isToggled' : '')}>
+      <li className={( !props.toggleState ? '--isToggled' : '')}>
         actual distribution
       </li>
-      <li className={( !props.toggleState ? '--isToggled' : '')}>
+      <li className={( props.toggleState ? '--isToggled' : '')}>
         even distribution
       </li>
     </ul>

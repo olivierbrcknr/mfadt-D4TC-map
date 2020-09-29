@@ -79,5 +79,13 @@ let colorMixer = (rgbA, rgbB, amountToMix) => {
 
 
 
-export {latLongToPixelMercartor,mapValues, colorMixer}
+// This function is based on the code from Elias Zamaria
+// https://stackoverflow.com/questions/2901102/how-to-print-a-number-with-commas-as-thousands-separators-in-javascript
+let numberWithCommas = (x) => {
+    return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+}
+
+
+
+export {latLongToPixelMercartor,mapValues,colorMixer,numberWithCommas}
 

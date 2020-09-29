@@ -647,14 +647,14 @@ const countriesLatLong = [
     "Latitude (average)": 8,
     "Longitude (average)": -2
   },
-  {
-    "Country": "Gibraltar",
-    "Alpha-2 code": "GI",
-    "Alpha-3 code": "GIB",
-    "Numeric code": 292,
-    "Latitude (average)": 36.1833,
-    "Longitude (average)": -5.3667
-  },
+  // {
+  //   "Country": "Gibraltar",
+  //   "Alpha-2 code": "GI",
+  //   "Alpha-3 code": "GIB",
+  //   "Numeric code": 292,
+  //   "Latitude (average)": 36.1833,
+  //   "Longitude (average)": -5.3667
+  // },
   {
     "Country": "Greece",
     "Alpha-2 code": "GR",
@@ -703,14 +703,14 @@ const countriesLatLong = [
     "Latitude (average)": 15.5,
     "Longitude (average)": -90.25
   },
-  {
-    "Country": "Guernsey",
-    "Alpha-2 code": "GG",
-    "Alpha-3 code": "GGY",
-    "Numeric code": 831,
-    "Latitude (average)": 49.5,
-    "Longitude (average)": -2.56
-  },
+  // {
+  //   "Country": "Guernsey",
+  //   "Alpha-2 code": "GG",
+  //   "Alpha-3 code": "GGY",
+  //   "Numeric code": 831,
+  //   "Latitude (average)": 49.5,
+  //   "Longitude (average)": -2.56
+  // },
   {
     "Country": "Guinea",
     "Alpha-2 code": "GN",
@@ -751,14 +751,14 @@ const countriesLatLong = [
     "Latitude (average)": -53.1,
     "Longitude (average)": 72.5167
   },
-  {
-    "Country": "Holy See (Vatican City State)",
-    "Alpha-2 code": "VA",
-    "Alpha-3 code": "VAT",
-    "Numeric code": 336,
-    "Latitude (average)": 41.9,
-    "Longitude (average)": 12.45
-  },
+  // {
+  //   "Country": "Holy See (Vatican City State)",
+  //   "Alpha-2 code": "VA",
+  //   "Alpha-3 code": "VAT",
+  //   "Numeric code": 336,
+  //   "Latitude (average)": 41.9,
+  //   "Longitude (average)": 12.45
+  // },
   {
     "Country": "Honduras",
     "Alpha-2 code": "HN",
@@ -871,14 +871,14 @@ const countriesLatLong = [
     "Latitude (average)": 36,
     "Longitude (average)": 138
   },
-  {
-    "Country": "Jersey",
-    "Alpha-2 code": "JE",
-    "Alpha-3 code": "JEY",
-    "Numeric code": 832,
-    "Latitude (average)": 49.21,
-    "Longitude (average)": -2.13
-  },
+  // {
+  //   "Country": "Jersey",
+  //   "Alpha-2 code": "JE",
+  //   "Alpha-3 code": "JEY",
+  //   "Numeric code": 832,
+  //   "Latitude (average)": 49.21,
+  //   "Longitude (average)": -2.13
+  // },
   {
     "Country": "Jordan",
     "Alpha-2 code": "JO",

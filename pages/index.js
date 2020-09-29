@@ -6,6 +6,7 @@ import Head from '../components/head'
 import Footer from '../components/footer'
 
 import DataVizMap from '../components/Map'
+import MapKey from '../components/Key'
 
 import sourceList from '../components/data/sources.js'
 
@@ -55,9 +56,7 @@ const Home = () => {
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi sit amet magna cursus, semper tortor at, hendrerit tortor. Nunc vulputate dapibus quam, sit amet vulputate dolor mattis a. Aliquam ipsum arcu, viverra a arcu vitae, luctus dapibus mauris. Donec pharetra convallis massa. Phasellus facilisis faucibus rutrum. Duis ultrices sit amet dui id convallis. Pellentesque quis ipsum semper lectus auctor porttitor. Vestibulum commodo efficitur scelerisque. Proin at elit sit amet nulla condimentum sagittis. Donec finibus, dui ac tincidunt bibendum, risus sem vulputate mauris, vel maximus lorem mauris vitae urna.
             </p>
 
-            <div className="key">
-              {/* Key */}
-            </div>
+            <MapKey />
 
             <ul className="sourceList">
               {sources}
