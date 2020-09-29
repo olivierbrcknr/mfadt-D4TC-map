@@ -31,7 +31,7 @@ a {
   transition: color 0.3s;
 }
 a:hover {
-  color: var(--color-highlight);
+  color: var(--color-black);
 }
 
 p {
@@ -45,15 +45,16 @@ p + p {
 /* Basic page elements */
 #wrapper {
   width: 100vw;
-  height: 100vh;
+  min-height: 100vh;
   overflow: hidden;
 }
 
 .essay {
-  height: 100vh;
-  overflow-y: scroll;
-  padding: calc( var(--grid-unit) * 2 );
+  /*height: 100vh;
+  overflow-y: scroll;*/
+  padding: calc( var(--grid-unit) * 3 );
   max-width: 500px;
+  width: calc( 100vw - 100vh );
 }
 
 .sourceList {
@@ -62,6 +63,7 @@ p + p {
   font-size: 8px;
   margin: calc( var(--grid-unit) * 2 ) 0;
   line-height: 10px;
+  margin-top: calc( var(--grid-unit) * 6 );
 }
 .sourceList li {
   margin-bottom: 10px;
@@ -70,4 +72,50 @@ p + p {
 }
 .sourceList li a {
   word-wrap: break-word;
+  white-space: pre-wrap;
 }
+
+#toggleInfo {
+  display: none;
+}
+
+
+/* mobile adjustments */
+@media (max-width: calc( 140vh) ) {
+
+  #toggleInfo {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 101;
+  }
+
+  .essay {
+    position: fixed;
+    top: 0;
+    left: -500px;
+    bottom: 0;
+    width: 500px;
+    transition: all 0.5s;
+    background: var(--color-white);
+    z-index: 100;
+    overflow-y: scroll;
+  }
+
+  .--isShowingInfo .essay {
+    left: 0px;
+    box-shadow: 0px 0px 50px rgba(0,0,0,0.1);
+  }
+
+  #wrapper {
+    transition: background 0.5s;
+  }
+  .--isShowingInfo #wrapper {
+    background: #EEE;
+  }
+
+}
+
+
+

@@ -1,10 +1,10 @@
 .DataVizMap {
 
-  position: absolute;
+  position: fixed;
   top: 0;
   right: 0;
-  bottom: 0;
-  left: 500px;
+  height: 100vh;
+  left: calc( 100vw - 100vh );
   overflow: hidden;
   user-select: none !important;
 
@@ -23,6 +23,12 @@
   right: 0;
   height: 100%;
   opacity: 0.1;
+}
+
+.DataVizMap-NorthIndicator {
+  position: absolute;
+  top: var(--grid-unit);
+  left: var(--grid-unit);
 }
 
 .DataVizMap-SizeLabel {
@@ -46,4 +52,13 @@
   border-top: none;
   height: 6px;
   width: 10vh;
+}
+
+
+/* mobile adjustments */
+@media (max-width: calc( 140vh) ) {
+
+  .DataVizMap {
+    left: 0;
+  }
 }

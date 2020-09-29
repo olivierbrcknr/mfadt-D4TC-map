@@ -14,9 +14,10 @@ const MapCountry = (props) => {
 
 
   let ppp = props.gdp / props.totalPopulation;
+  let euPpp = props.EUtotalGDP / props.EUtotalPop;
 
   //let size = mapValues( ppp, 0, 1000000, 10, 100,);
-  let size = mapValues( props.totalPopulation, 0, 1000000000, 10, 100,);
+  let size = mapValues( props.totalPopulation, 0, 100000000, 5, 40,);
 
   if( size > 50 ){
     size = 100;
@@ -31,6 +32,11 @@ const MapCountry = (props) => {
 
     refugeesInCountry = props.EUtotalRefugee * (props.gdp / props.EUtotalGDP);
 
+    // Test with ppp
+    // refugeesInCountry = props.EUtotalRefugee * (ppp/euPpp);
+
+
+    //console.log(props.countryInfo["Alpha-3 code"],refugeesInCountryP,refugeesInCountry)
   }
   // console.log(refugeesInCountry)
 
@@ -41,15 +47,20 @@ const MapCountry = (props) => {
 
   // let comparingValue = (refugeesInCountry * ppp);
 
-  let comparingValue = (refugeesInCountry * ppp * 1000) / props.EUtotalGDP;
+  // let comparingValue = (refugeesInCountry * ppp * 1000) / props.EUtotalGDP;
+
+  let comparingValue = percent / 7;
 
   if( props.countryInfo && props.countryInfo["Alpha-3 code"] === 'DEU' ){
     console.log(props.countryInfo["Alpha-3 code"],comparingValue)
   }
 
-  let color = colorMixer('#0085FF','#CCCCCC', comparingValue*2 );
-  if( comparingValue > 0.5 ){
-    color = colorMixer('#FF0000','#0085FF', comparingValue*2-1 );
+  let color = colorMixer('#0085FF','#CCCCCC', comparingValue*4 );
+  if( comparingValue > 0.25 ){
+
+    comparingValue = (comparingValue-0.25) / 0.75;
+
+    color = colorMixer('#FF0000','#0085FF', comparingValue );
   }
   // let color = colorMixer('#0085FF','#CCCCCC', comparingValue*4 );
   // if( comparingValue > 0.25 ){
@@ -83,11 +94,38 @@ const MapCountry = (props) => {
       <div className="MapCountry-CursorMinSelection"></div>
 
       <div className="MapCountry-HoverInfo">
-        <div>{countryInfo.Country} <span>{props.year}</span></div><br/>
-        PPP: {displayPPP} US$ <br/>
-        Population: {displayPopulation} mio <br/>
-        Refugees: {displayRefugess} <br/>
-        Percent of Population: {displayPercent}%
+        <div className="MapCountry-HoverInfo-Name">
+          {countryInfo.Country} <span className="MapCountry-HoverInfo-Year">({props.year})</span>
+        </div>
+
+        <table className="MapCountry-HoverInfo-Table">
+          <tbody>
+            <tr>
+              <td>
+                PPP
+              </td>
+              <td>
+                {displayPPP} US$
+              </td>
+            </tr>
+            <tr>
+              <td>
+                Population
+              </td>
+              <td>
+                {displayPopulation} mio
+              </td>
+            </tr>
+            <tr>
+              <td>
+                Refugees
+              </td>
+              <td>
+                {displayRefugess} → {displayPercent}%
+              </td>
+            </tr>
+          </tbody>
+        </table>
       </div>
     </div>
   )

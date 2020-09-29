@@ -14,6 +14,8 @@ const Home = () => {
 
   let classes = ['home'];
 
+  const [showInfo,setShowInfo] = useState(false);
+
 
   let sources = sourceList.map( (source, index) => {
 
@@ -29,6 +31,11 @@ const Home = () => {
       </li>
     )
   });
+
+
+  if( showInfo ){
+    classes.push('--isShowingInfo');
+  }
 
 
   return (
@@ -69,6 +76,10 @@ const Home = () => {
         </section>
 
         <DataVizMap />
+
+        <button id="toggleInfo" onClick={ () => setShowInfo(!showInfo) }>
+          Show Info
+        </button>
 
        </div>
 

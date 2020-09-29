@@ -96,7 +96,7 @@ const DataVizMap = (props) => {
     }
     if(refugeeElement){
       if( mapState.year === 2025 ){
-        acceptedRefugees = refugeeElement[2019] * Math.pow( 1.08 , yearsInTheFuture );
+        acceptedRefugees = refugeeElement[2019] * Math.pow( 1.2 , yearsInTheFuture );
       }else{
         acceptedRefugees = refugeeElement[mapState.year];
       }
@@ -111,9 +111,9 @@ const DataVizMap = (props) => {
     }
   }
 
-  if(mapState.year === 2025){
-    totalRefugeesEU += 2000000; // add 2 mio from lebanon etc
-  }
+  // if(mapState.year === 2025){
+  //   totalRefugeesEU += 2000000; // add 2 mio from lebanon etc
+  // }
 
   // let allEUCountries = [];
   let dataPoints = countriesLatLong.map( (country,index)=>{
@@ -225,6 +225,8 @@ const DataVizMap = (props) => {
           </div>
           <div className="DataVizMap-SizeLabel-Length"></div>
         </div>
+
+        <img className="DataVizMap-NorthIndicator" src="/northarrow.svg" />
 
      </div>
 

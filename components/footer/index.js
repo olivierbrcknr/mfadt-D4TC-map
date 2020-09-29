@@ -8,7 +8,7 @@ const Footer = (props) => {
 
   return (
     <footer className={props.className}>
-      A project by <a href="https://olivierbrueckner.de/">Olivier Brückner</a>
+      2020
     </footer>
   )
 }

@@ -215,14 +215,14 @@ const countriesLatLong = [
       "Latitude (average)":47.1667,
       "Longitude (average)":9.5333
    },
-   // {
-   //    "Country":"Lebanon",
-   //    "Alpha-2 code":"LB",
-   //    "Alpha-3 code":"LBN",
-   //    "Numeric code":422,
-   //    "Latitude (average)":33.8333,
-   //    "Longitude (average)":35.8333
-   // },
+   {
+      "Country":"Lebanon",
+      "Alpha-2 code":"LB",
+      "Alpha-3 code":"LBN",
+      "Numeric code":422,
+      "Latitude (average)":33.8333,
+      "Longitude (average)":35.8333
+   },
    {
       "Country":"Latvia",
       "Alpha-2 code":"LV",
@@ -255,14 +255,14 @@ const countriesLatLong = [
    //    "Latitude (average)":31.5,
    //    "Longitude (average)":34.75
    // },
-   {
-      "Country":"Isle of Man",
-      "Alpha-2 code":"IM",
-      "Alpha-3 code":"IMN",
-      "Numeric code":833,
-      "Latitude (average)":54.23,
-      "Longitude (average)":-4.55
-   },
+   // {
+   //    "Country":"Isle of Man",
+   //    "Alpha-2 code":"IM",
+   //    "Alpha-3 code":"IMN",
+   //    "Numeric code":833,
+   //    "Latitude (average)":54.23,
+   //    "Longitude (average)":-4.55
+   // },
    {
       "Country":"Ireland",
       "Alpha-2 code":"IE",
@@ -335,14 +335,14 @@ const countriesLatLong = [
       "Latitude (average)":64,
       "Longitude (average)":26
    },
-   {
-      "Country":"Faroe Islands",
-      "Alpha-2 code":"FO",
-      "Alpha-3 code":"FRO",
-      "Numeric code":234,
-      "Latitude (average)":62,
-      "Longitude (average)":-7
-   },
+   // {
+   //    "Country":"Faroe Islands",
+   //    "Alpha-2 code":"FO",
+   //    "Alpha-3 code":"FRO",
+   //    "Numeric code":234,
+   //    "Latitude (average)":62,
+   //    "Longitude (average)":-7
+   // },
    {
       "Country":"Estonia",
       "Alpha-2 code":"EE",
