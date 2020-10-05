@@ -1,0 +1,23 @@
+.MapLegend {
+  position: absolute;
+  top: calc( var(--grid-unit) * 10 );
+  right: var(--grid-unit);
+  height: 80px;
+  width: 8px;
+  background: linear-gradient(
+    180deg,
+    #CCCCCC 0%,
+    #0085FF 28.5%,
+    #FF0000 100%);
+}
+
+
+.MapLegend-Label {
+  font-size: 8px;
+  font-family: var(--font-family-mono);
+  color: var(--color-gray-dark);
+  position: absolute;
+  right: calc(100% + 4px);
+  transform: translateY(-50%);
+  font-weight: bold;
+}

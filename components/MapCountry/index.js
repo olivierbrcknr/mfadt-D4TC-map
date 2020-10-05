@@ -88,6 +88,8 @@ const MapCountry = (props) => {
   let displayPPP = numberWithCommas(Math.round(ppp));
   let displayRefugess = numberWithCommas(Math.round(refugeesInCountry));
 
+  let displayGDP = numberWithCommas(Math.round(props.gdp / 1000000000));
+
   return (
     <div className={classes.join(' ')} style={styleAdjustments}>
 
@@ -100,6 +102,14 @@ const MapCountry = (props) => {
 
         <table className="MapCountry-HoverInfo-Table">
           <tbody>
+            <tr>
+              <td>
+                GDP
+              </td>
+              <td>
+                {displayGDP} bil. US$
+              </td>
+            </tr>
             <tr>
               <td>
                 PPP

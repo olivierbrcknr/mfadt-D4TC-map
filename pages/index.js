@@ -69,8 +69,6 @@ const Home = () => {
               {sources}
             </ul>
 
-            <Footer />
-
           </article>
 
         </section>

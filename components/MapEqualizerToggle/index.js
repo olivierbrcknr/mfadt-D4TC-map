@@ -13,7 +13,7 @@ const MapEqualizerToggle = (props) => {
         actual distribution
       </li>
       <li className={( props.toggleState ? '--isToggled' : '')}>
-        even distribution
+        adjusted distribution by GDP
       </li>
     </ul>
   )

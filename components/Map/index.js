@@ -3,6 +3,7 @@ import React, { useEffect, useState} from 'react'
 import MapCountry from '../MapCountry'
 import MapTimeSelector from '../MapTimeSelector'
 import MapEqualizerToggle from '../MapEqualizerToggle'
+import MapLegend from '../MapLegend'
 
 import './Map.css';
 
@@ -96,7 +97,7 @@ const DataVizMap = (props) => {
     }
     if(refugeeElement){
       if( mapState.year === 2025 ){
-        acceptedRefugees = refugeeElement[2019] * Math.pow( 1.2 , yearsInTheFuture );
+        acceptedRefugees = refugeeElement[2019] * Math.pow( 1.05 , yearsInTheFuture );
       }else{
         acceptedRefugees = refugeeElement[mapState.year];
       }
@@ -228,16 +229,18 @@ const DataVizMap = (props) => {
 
         <img className="DataVizMap-NorthIndicator" src="/northarrow.svg" />
 
-     </div>
+      </div>
 
-     <MapTimeSelector
+      <MapTimeSelector
       possibleTimes={possibleTimes}
       selection={mapState.year}
       callback={(y) => setMapState({...mapState,year: y}) } />
 
-    <MapEqualizerToggle
+      <MapEqualizerToggle
       toggleState={mapState.isEqualized}
       callback={(e) => setMapState({...mapState,isEqualized: e}) } />
+
+      <MapLegend />
 
     </div>
   )

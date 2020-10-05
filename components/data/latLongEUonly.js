@@ -23,14 +23,14 @@ const countriesLatLong = [
       "Latitude (average)":39,
       "Longitude (average)":35
    },
-   {
-      "Country":"Tunisia",
-      "Alpha-2 code":"TN",
-      "Alpha-3 code":"TUN",
-      "Numeric code":788,
-      "Latitude (average)":34,
-      "Longitude (average)":9
-   },
+   // {
+   //    "Country":"Tunisia",
+   //    "Alpha-2 code":"TN",
+   //    "Alpha-3 code":"TUN",
+   //    "Numeric code":788,
+   //    "Latitude (average)":34,
+   //    "Longitude (average)":9
+   // },
    // {
    //    "Country":"Syrian Arab Republic",
    //    "Alpha-2 code":"SY",
@@ -143,14 +143,14 @@ const countriesLatLong = [
       "Latitude (average)":52.5,
       "Longitude (average)":5.75
    },
-   {
-      "Country":"Morocco",
-      "Alpha-2 code":"MA",
-      "Alpha-3 code":"MAR",
-      "Numeric code":504,
-      "Latitude (average)":32,
-      "Longitude (average)":-5
-   },
+   // {
+   //    "Country":"Morocco",
+   //    "Alpha-2 code":"MA",
+   //    "Alpha-3 code":"MAR",
+   //    "Numeric code":504,
+   //    "Latitude (average)":32,
+   //    "Longitude (average)":-5
+   // },
    {
       "Country":"Montenegro",
       "Alpha-2 code":"ME",

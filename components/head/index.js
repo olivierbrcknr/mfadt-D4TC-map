@@ -15,6 +15,9 @@ const Head = props => {
       <title>{props.title}</title>
       <meta name="viewport" content="width=device-width, initial-scale=1" />
 
+      <meta name='date' content='Oct. 12, 2020' />
+      <meta name='search_date' content='2020-10-12' />
+
       {/* IBM Plex
       <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,300;0,400;0,600;1,400&family=IBM+Plex+Sans:ital,wght@0,300;0,400;0,600;1,400;1,600&display=swap" rel="stylesheet" />*/}
 

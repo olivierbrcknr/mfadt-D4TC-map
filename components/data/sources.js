@@ -1,15 +1,5 @@
 const sourceList = [
   {
-    "author": "Eurostat",
-    "publisher": "",
-    "location": "",
-    "year": 2020,
-    "title": "Asylum statistics",
-    "type": "dataset",
-    "accessed": "2020-09-20",
-    "link": "http://ec.europa.eu/eurostat/statistics-explained/index.php/Asylum_statistics"
-  },
-  {
     "author": "European Union",
     "publisher": "",
     "location": "",
@@ -18,6 +8,16 @@ const sourceList = [
     "type": "",
     "accessed": "2020-09-20",
     "link": "https://europa.eu/european-union/about-eu/figures/living_en#:~:text=The%20EU%20covers%20over%204,population%20after%20China%20and%20India"
+  },
+  {
+    "author": "Eurostat",
+    "publisher": "",
+    "location": "",
+    "year": 2020,
+    "title": "Asylum statistics",
+    "type": "dataset",
+    "accessed": "2020-09-20",
+    "link": "http://ec.europa.eu/eurostat/statistics-explained/index.php/Asylum_statistics"
   },
   {
     "author": "Kirchofer et al.",
@@ -50,6 +50,16 @@ const sourceList = [
     "link": "https://www.nytimes.com/2020/09/18/world/europe/eu-moria-migrants.html"
   },
   {
+    "author": "Tamošauskas, Tadas",
+    "publisher": "",
+    "location": "",
+    "year": "n.d.",
+    "title": "",
+    "type": "dataset",
+    "accessed": "2020-09-22",
+    "link": "https://gist.github.com/tadast/8827699#file-countries_codes_and_coordinates-csv"
+  },
+  {
     "author": "The World Bank",
     "publisher": "",
     "location": "",
@@ -78,6 +88,36 @@ const sourceList = [
     "type": "dataset",
     "accessed": "2020-09-20",
     "link": "https://data.worldbank.org/indicator/SM.POP.REFG"
+  },
+  {
+    "author": "The World Bank",
+    "publisher": "",
+    "location": "",
+    "year": 2020,
+    "title": "Population growth (annual %)",
+    "type": "dataset",
+    "accessed": "2020-09-29",
+    "link": "https://data.worldbank.org/indicator/SP.POP.GROW"
+  },
+  {
+    "author": "The World Bank",
+    "publisher": "",
+    "location": "",
+    "year": 2020,
+    "title": "GDP growth (annual %)",
+    "type": "dataset",
+    "accessed": "2020-09-29",
+    "link": "https://data.worldbank.org/indicator/NY.GDP.MKTP.KD.ZG"
+  },
+  {
+    "author": "Wikimedia Commons",
+    "publisher": "",
+    "location": "",
+    "year": 2011,
+    "title": "Mercator Projection.svg",
+    "type": "image",
+    "accessed": "2020-09-25",
+    "link": "https://commons.wikimedia.org/wiki/File:Mercator_Projection.svg"
   }
 ]
 
