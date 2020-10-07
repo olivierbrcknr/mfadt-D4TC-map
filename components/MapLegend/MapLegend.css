@@ -2,15 +2,9 @@
   position: absolute;
   top: calc( var(--grid-unit) * 10 );
   right: var(--grid-unit);
-  height: 80px;
+  height: 100px;
   width: 8px;
-  background: linear-gradient(
-    180deg,
-    #CCCCCC 0%,
-    #0085FF 33.3%,
-    #FF8A00 100%);
 }
-
 
 .MapLegend-Label {
   font-size: 8px;

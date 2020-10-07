@@ -3,6 +3,7 @@ import React from 'react'
 import './MapCountry.css';
 
 import {latLongToPixelMercartor,mapValues,colorMixer,numberWithCommas} from '../utils'
+import {legendValues,legendColors} from '../data/legendVars.js'
 
 
 const MapCountry = (props) => {
@@ -15,7 +16,7 @@ const MapCountry = (props) => {
   let ppp = props.gdp / props.totalPopulation;
   let euPpp = props.EUtotalGDP / props.EUtotalPop;
 
-  let size = mapValues( props.totalPopulation, 0, 100000000, 5, 40,);
+  let size = mapValues( props.totalPopulation, 0, 100000000, 5, 40);
 
   if( size > 50 ){
     size = 100;
@@ -28,14 +29,24 @@ const MapCountry = (props) => {
   }
 
   let percent = refugeesInCountry / (props.totalPopulation/100);
-  let comparingValue = percent / 6;
+  let color = null;
 
-  let color = colorMixer('#0085FF','#CCCCCC', comparingValue*4 );
-  if( comparingValue > 0.25 ){
+  for( let i = 0; i < legendValues.length; i++ ){
 
-    comparingValue = (comparingValue-0.25) / 0.75;
+    let nextVal = legendValues[i+1];
+    let prevVal = legendValues[i-1];
 
-    color = colorMixer('#FF8A00','#0085FF', comparingValue );
+    if( prevVal === undefined ){
+      prevVal = 0;
+    }
+    if( nextVal === undefined ){
+      nextVal = 100;
+    }
+
+    if( legendValues[i] <= percent && percent < nextVal){
+      let comparingValue = mapValues( percent, prevVal, nextVal, 0, 1);
+      color = colorMixer(legendColors[i+1],legendColors[i], comparingValue );
+    }
   }
 
   let styleAdjustments = {

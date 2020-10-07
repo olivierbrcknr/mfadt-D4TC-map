@@ -4,13 +4,29 @@ import './Key.css';
 
 import {latLongToPixelMercartor,mapValues,colorMixer,numberWithCommas} from '../utils'
 
+import {legendValues,legendColors} from '../data/legendVars.js'
+
+
 
 const MapKey = (props) => {
 
   let classes = ['MapKey'];
 
+  let colorAnimation = '@keyframes colorChange {';
+  let maxVal = legendValues[legendValues.length-1];
+  for( let i = 0; i < legendValues.length; i++ ){
+    let fromTop = (legendValues[i]/maxVal)*100 + '%';
+    colorAnimation+= fromTop + ' { background: ' + legendColors[i] + ';}'
+  }
+  colorAnimation += '}'
+
+
   return (
     <div className={classes.join(' ')}>
+
+      <style>
+        {colorAnimation}
+      </style>
 
       <h4>
         Key
@@ -29,9 +45,9 @@ const MapKey = (props) => {
           <p>
             The <b>size</b> represents the population
           </p>
-          <p>
+          {/*<p>
             The <b>biggest</b> size is approx. <b>80 mio</b>, the <b>smallest</b> size is approx. <b>2 mio</b>. Lower numbers will be displayed the same.
-          </p>
+          </p>*/}
         </div>
 
       </div>
@@ -49,9 +65,9 @@ const MapKey = (props) => {
           <p>
             The <b>color</b> inidcates the % of refugees relative to the population
           </p>
-          <p>
+          {/*<p>
             <b style={{'color': '#0085FF'}}>blue</b> is approx. <b>2%</b>, <b style={{'color': '#FF8A00'}}>orange</b> is approx. <b>6%</b>
-          </p>
+          </p>*/}
 
         </div>
 
