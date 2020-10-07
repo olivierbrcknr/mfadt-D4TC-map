@@ -4,7 +4,7 @@
 }
 
 .MapKey h4 {
-  margin-top: calc( var(--grid-unit) * 2 );
+  margin-top: calc( var(--grid-unit) * 4 );
 }
 .MapKey p {
   text-indent: 0;
@@ -15,11 +15,39 @@
   display: flex;
   padding: calc( var(--grid-unit) * 1 ) 0;
 }
+.MapKey-PointUsage {
+
+}
 
 .MapKey-Point-Viz {
   width: 60px;
   height: 60px;
   flex-shrink: 0;
+}
+.MapKey-PointUsage .MapKey-Point-Viz {
+  height: 40px;
+}
+.MapKey-Point-Viz img {
+  max-width: 16px;
+  max-height: 16px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+}
+.MapKey-Point-Viz-Button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 34px;
+  height: 28px;
+  border-radius: 6px;
+  border: solid 1px var(--color-gray-med);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  font-size: 16px;
 }
 
 .MapKey-Point-Desc {

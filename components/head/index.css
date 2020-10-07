@@ -38,9 +38,13 @@ p {
   text-indent: 1em;
 }
 p + p {
-  margin-top: 0.3em;
+  margin-top: 0.5em;
 }
 
+blockquote {
+  font-size: 1.4em;
+  font-style: italic;
+}
 
 /* Basic page elements */
 #wrapper {
@@ -57,12 +61,24 @@ p + p {
   width: calc( 100vw - 100vh );
 }
 
+.description {
+  line-height: 1.6;
+}
+
+.description-source {
+  font-family: var(--font-family-mono);
+  color: var(--color-gray-med);
+  font-size: 12px;
+  letter-spacing: -0.03em;
+  text-decoration: none !important;
+}
+
 .sourceList {
   font-family: var(--font-family-mono);
   color: var(--color-gray-med);
-  font-size: 8px;
+  font-size: 9px;
   margin: calc( var(--grid-unit) * 2 ) 0;
-  line-height: 10px;
+  line-height: 11px;
   margin-top: calc( var(--grid-unit) * 6 );
 }
 .sourceList li {

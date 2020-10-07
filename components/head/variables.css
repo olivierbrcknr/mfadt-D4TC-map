@@ -1,7 +1,7 @@
 :root {
   /* Typography */
-  --font-family-reg:  'Roboto', sans-serif;
-  --font-family-mono:  'Roboto Mono', monospace;
+  --font-family-reg:  'IBM Plex Sans', sans-serif;
+  --font-family-mono:  'IBM Plex Mono', monospace;
 
   /* Colors */
   --color-white: #FFF;

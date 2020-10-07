@@ -1,5 +1,6 @@
 // React
 import React, { useEffect, useState, useRef } from 'react'
+import ReactMarkdown from 'react-markdown'
 
 // Components
 import Head from '../components/head'
@@ -9,6 +10,7 @@ import DataVizMap from '../components/Map'
 import MapKey from '../components/Key'
 
 import sourceList from '../components/data/sources.js'
+import description from '../components/data/description.md'
 
 const Home = () => {
 
@@ -27,7 +29,6 @@ const Home = () => {
     return(
       <li key={'source-'+index}>
         {source.author} ({source.year}). <i>{source.title}</i>{sourceType}. Accessed on {sourceDate} at <a href={source.link}>{source.link}</a>
-
       </li>
     )
   });
@@ -37,11 +38,20 @@ const Home = () => {
     classes.push('--isShowingInfo');
   }
 
+  let SourceRenderer = (props) => {
+
+    let idToSearch = parseInt(props.children);
+    let source = sourceList.find( element => element.ID === idToSearch );
+    let author = source.author.split(',')[0];
+    let date = source.year.toString().substring(0, 4);
+
+    return <a href={source.link} className="description-source">({author} {date})</a>
+  }
 
   return (
     <div className={classes.join(' ')}>
 
-      <Head title="Home" date="" />
+      <Head title="The Refugee Crisis In Europe" date="" />
 
       <div id="wrapper">
 
@@ -56,12 +66,13 @@ const Home = () => {
               by <a href="https://olivierbrueckner.de/">Olivier Brückner</a>, October 12th, 2020
             </h4>
 
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi sit amet magna cursus, semper tortor at, hendrerit tortor. Nunc vulputate dapibus quam, sit amet vulputate dolor mattis a. Aliquam ipsum arcu, viverra a arcu vitae, luctus dapibus mauris. Donec pharetra convallis massa. Phasellus facilisis faucibus rutrum. Duis ultrices sit amet dui id convallis. Pellentesque quis ipsum semper lectus auctor porttitor. Vestibulum commodo efficitur scelerisque. Proin at elit sit amet nulla condimentum sagittis. Donec finibus, dui ac tincidunt bibendum, risus sem vulputate mauris, vel maximus lorem mauris vitae urna.
-            </p>
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi sit amet magna cursus, semper tortor at, hendrerit tortor. Nunc vulputate dapibus quam, sit amet vulputate dolor mattis a. Aliquam ipsum arcu, viverra a arcu vitae, luctus dapibus mauris. Donec pharetra convallis massa. Phasellus facilisis faucibus rutrum. Duis ultrices sit amet dui id convallis. Pellentesque quis ipsum semper lectus auctor porttitor. Vestibulum commodo efficitur scelerisque. Proin at elit sit amet nulla condimentum sagittis. Donec finibus, dui ac tincidunt bibendum, risus sem vulputate mauris, vel maximus lorem mauris vitae urna.
-            </p>
+            <div className="description">
+              <ReactMarkdown
+                renderers={{
+                  inlineCode: SourceRenderer
+                }}
+                source={description} />
+            </div>
 
             <MapKey />
 

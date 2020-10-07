@@ -30,9 +30,47 @@ const DataVizMap = (props) => {
     isEqualized: false
   });
 
+  let handleKeyPress = (e) => {
+
+    let yearIndex = possibleTimes.indexOf(mapState.year);
+
+    switch (e.key){
+      case 'd':
+      case 'D':
+        setMapState({
+          ...mapState,
+          isEqualized: !mapState.isEqualized
+        })
+        break;
+      case 'ArrowLeft':
+        yearIndex--;
+        if( yearIndex < 0 ){
+          yearIndex = 0;
+        }
+        setMapState({
+          ...mapState,
+          year: possibleTimes[yearIndex]
+        })
+        break;
+      case 'ArrowRight':
+        yearIndex++;
+        if( yearIndex > possibleTimes.length-1 ){
+          yearIndex = possibleTimes.length-1;
+        }
+        setMapState({
+          ...mapState,
+          year: possibleTimes[yearIndex]
+        })
+        break;
+    }
+  }
+
   useEffect(()=>{
-    // console.log(mapState)
-  },[mapState])
+    document.addEventListener("keydown", handleKeyPress);
+    return() => {
+      document.removeEventListener("keydown", handleKeyPress);
+    }
+  },[mapState]);
 
   let classes = ['DataVizMap'];
 
@@ -181,7 +219,7 @@ const DataVizMap = (props) => {
         }
         if(refugeeElement){
           if( mapState.year === 2025 ){
-            acceptedRefugees = refugeeElement[2019] * Math.pow( 1.2 , yearsInTheFuture );
+            acceptedRefugees = refugeeElement[2019] * Math.pow( 1.05 , yearsInTheFuture );
           }else{
             acceptedRefugees = refugeeElement[mapState.year];
           }

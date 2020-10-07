@@ -50,7 +50,7 @@ const MapKey = (props) => {
             The <b>color</b> inidcates the % of refugees relative to the population
           </p>
           <p>
-            <b style={{'color': '#0085FF'}}>blue</b> is approx. <b>2%</b>, <b style={{'color': '#FF0000'}}>red</b> is approx. <b>7%</b>
+            <b style={{'color': '#0085FF'}}>blue</b> is approx. <b>2%</b>, <b style={{'color': '#FF0000'}}>red</b> is approx. <b>6%</b>
           </p>
 
         </div>
@@ -58,7 +58,62 @@ const MapKey = (props) => {
       </div>
 
       <h4>
-        Calculation — Even Distribution
+        Usage
+      </h4>
+
+      <div className="MapKey-Point MapKey-PointUsage">
+        <div className="MapKey-Point-Viz">
+          <img src="/cursor.svg" />
+        </div>
+        <div className="MapKey-Point-Desc">
+          <p>
+            Hover over a country to see the details
+          </p>
+        </div>
+      </div>
+
+      <div className="MapKey-Point MapKey-PointUsage">
+        <div className="MapKey-Point-Viz">
+          <div className="MapKey-Point-Viz-Button">
+            →
+          </div>
+        </div>
+        <div className="MapKey-Point-Desc">
+          <p>
+            The right arrow key increases the year
+          </p>
+        </div>
+      </div>
+
+      <div className="MapKey-Point MapKey-PointUsage">
+        <div className="MapKey-Point-Viz">
+          <div className="MapKey-Point-Viz-Button">
+            ←
+          </div>
+        </div>
+        <div className="MapKey-Point-Desc">
+          <p>
+            The left arrow key decreases the year
+          </p>
+        </div>
+      </div>
+
+      <div className="MapKey-Point MapKey-PointUsage">
+        <div className="MapKey-Point-Viz">
+          <div className="MapKey-Point-Viz-Button">
+            D
+          </div>
+        </div>
+        <div className="MapKey-Point-Desc">
+          <p>
+            The D key toggles between the distributions
+          </p>
+        </div>
+      </div>
+
+
+      <h4>
+        Calculation — Adjusted Distribution
       </h4>
 
       <p>
@@ -66,7 +121,7 @@ const MapKey = (props) => {
       </p>
 
       <h4>
-        Calculation — 2025
+        Calculation — Estimation 2025
       </h4>
 
       <p>
@@ -84,13 +139,4 @@ const MapKey = (props) => {
   )
 }
 
-
-/* <div>
-  Size = Population
-</div>
-
-<div>
-  Color = refugees in Country * PPP / EU total GDP
-</div>
-*/
 export default MapKey

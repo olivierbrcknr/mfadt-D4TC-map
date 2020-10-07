@@ -1,5 +1,6 @@
 const sourceList = [
   {
+    "ID": 1,
     "author": "European Union",
     "publisher": "",
     "location": "",
@@ -7,9 +8,10 @@ const sourceList = [
     "title": "Living in the EU",
     "type": "",
     "accessed": "2020-09-20",
-    "link": "https://europa.eu/european-union/about-eu/figures/living_en#:~:text=The%20EU%20covers%20over%204,population%20after%20China%20and%20India"
+    "link": "https://europa.eu/european-union/about-eu/figures/living_en"
   },
   {
+    "ID": 2,
     "author": "Eurostat",
     "publisher": "",
     "location": "",
@@ -20,6 +22,7 @@ const sourceList = [
     "link": "http://ec.europa.eu/eurostat/statistics-explained/index.php/Asylum_statistics"
   },
   {
+    "ID": 3,
     "author": "Kirchofer et al.",
     "publisher": "Telegraph",
     "location": "London, UK",
@@ -30,6 +33,7 @@ const sourceList = [
     "link": "http://www.telegraph.co.uk/news/worldnews/europe/11845205/Why-do-refugees-and-migrants-come-to-Europe-and-what-must-be-done-to-ease-the-crisis.html"
   },
   {
+    "ID": 4,
     "author": "Spindler, William",
     "publisher": "UNHCR",
     "location": "",
@@ -40,6 +44,7 @@ const sourceList = [
     "link": "https://www.unhcr.org/news/stories/2015/12/56ec1ebde/2015-year-europes-refugee-crisis.html"
   },
   {
+    "ID": 5,
     "author": "Stevis-Gridneff, Matina",
     "publisher": "New York Times",
     "location": "",
@@ -50,16 +55,18 @@ const sourceList = [
     "link": "https://www.nytimes.com/2020/09/18/world/europe/eu-moria-migrants.html"
   },
   {
+    "ID": 6,
     "author": "Tamošauskas, Tadas",
     "publisher": "",
     "location": "",
-    "year": "n.d.",
+    "year": "",
     "title": "",
     "type": "dataset",
     "accessed": "2020-09-22",
     "link": "https://gist.github.com/tadast/8827699#file-countries_codes_and_coordinates-csv"
   },
   {
+    "ID": 7,
     "author": "The World Bank",
     "publisher": "",
     "location": "",
@@ -70,6 +77,7 @@ const sourceList = [
     "link": "https://data.worldbank.org/indicator/NY.GDP.MKTP.CD"
   },
   {
+    "ID": 8,
     "author": "The World Bank",
     "publisher": "",
     "location": "",
@@ -80,6 +88,7 @@ const sourceList = [
     "link": "https://data.worldbank.org/indicator/SP.POP.TOTL"
   },
   {
+    "ID": 9,
     "author": "The World Bank",
     "publisher": "",
     "location": "",
@@ -90,6 +99,7 @@ const sourceList = [
     "link": "https://data.worldbank.org/indicator/SM.POP.REFG"
   },
   {
+    "ID": 10,
     "author": "The World Bank",
     "publisher": "",
     "location": "",
@@ -100,6 +110,7 @@ const sourceList = [
     "link": "https://data.worldbank.org/indicator/SP.POP.GROW"
   },
   {
+    "ID": 11,
     "author": "The World Bank",
     "publisher": "",
     "location": "",
@@ -110,6 +121,7 @@ const sourceList = [
     "link": "https://data.worldbank.org/indicator/NY.GDP.MKTP.KD.ZG"
   },
   {
+    "ID": 12,
     "author": "Wikimedia Commons",
     "publisher": "",
     "location": "",

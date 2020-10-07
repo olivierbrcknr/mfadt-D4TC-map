@@ -57,6 +57,12 @@
   color: var(--color-gray-med);
   margin-left: 2px;
 }
+.MapCountry-HoverInfo-Disclaimer {
+  font-size: 8px;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: var(--color-gray-med);
+}
 
 .MapCountry-HoverInfo-Table td:first-child {
   color: var(--color-gray-med);

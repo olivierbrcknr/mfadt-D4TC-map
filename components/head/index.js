@@ -18,10 +18,11 @@ const Head = props => {
       <meta name='date' content='Oct. 12, 2020' />
       <meta name='search_date' content='2020-10-12' />
 
-      {/* IBM Plex
-      <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,300;0,400;0,600;1,400&family=IBM+Plex+Sans:ital,wght@0,300;0,400;0,600;1,400;1,600&display=swap" rel="stylesheet" />*/}
+      {/* IBM Plex */}
+      <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,300;0,400;0,600;1,400&family=IBM+Plex+Sans:ital,wght@0,300;0,400;0,600;1,400;1,600&display=swap" rel="stylesheet" />
 
-      <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,300;0,400;0,500;0,600;1,400&family=Roboto:ital,wght@0,300;0,400;0,500;1,400;1,500&display=swap" rel="stylesheet" />
+      {/* Roboto
+      <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,300;0,400;0,500;0,600;1,400&family=Roboto:ital,wght@0,300;0,400;0,500;1,400;1,500&display=swap" rel="stylesheet" /> */}
 
 
     </NextHead>

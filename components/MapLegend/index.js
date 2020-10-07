@@ -13,12 +13,12 @@ const MapLegend = (props) => {
         0%
       </div>
 
-      <div className="MapLegend-Label" style={{top: (2/7)*100 + '%'}}>
+      <div className="MapLegend-Label" style={{top: (2/6)*100 + '%'}}>
         2%
       </div>
 
       <div className="MapLegend-Label" style={{top: 100+'%'}}>
-        >7%
+        >6%
       </div>
 
     </div>

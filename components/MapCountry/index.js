@@ -12,11 +12,9 @@ const MapCountry = (props) => {
   const countryInfo = props.countryInfo;
   const position = latLongToPixelMercartor( props.latLongVals, countryInfo["Latitude (average)"], countryInfo["Longitude (average)"] )
 
-
   let ppp = props.gdp / props.totalPopulation;
   let euPpp = props.EUtotalGDP / props.EUtotalPop;
 
-  //let size = mapValues( ppp, 0, 1000000, 10, 100,);
   let size = mapValues( props.totalPopulation, 0, 100000000, 5, 40,);
 
   if( size > 50 ){
@@ -26,34 +24,11 @@ const MapCountry = (props) => {
   let refugeesInCountry = props.refugees
 
   if( props.isEqualized ){
-
-    // just by population
-    // refugeesInCountry = props.EUtotalRefugee * (props.totalPopulation / props.EUtotalPop);
-
     refugeesInCountry = props.EUtotalRefugee * (props.gdp / props.EUtotalGDP);
-
-    // Test with ppp
-    // refugeesInCountry = props.EUtotalRefugee * (ppp/euPpp);
-
-
-    //console.log(props.countryInfo["Alpha-3 code"],refugeesInCountryP,refugeesInCountry)
   }
-  // console.log(refugeesInCountry)
-
 
   let percent = refugeesInCountry / (props.totalPopulation/100);
-
-  // let color = colorMixer('#0085FF','#D88A28', (percent/2) );
-
-  // let comparingValue = (refugeesInCountry * ppp);
-
-  // let comparingValue = (refugeesInCountry * ppp * 1000) / props.EUtotalGDP;
-
-  let comparingValue = percent / 7;
-
-  if( props.countryInfo && props.countryInfo["Alpha-3 code"] === 'DEU' ){
-    console.log(props.countryInfo["Alpha-3 code"],comparingValue)
-  }
+  let comparingValue = percent / 6;
 
   let color = colorMixer('#0085FF','#CCCCCC', comparingValue*4 );
   if( comparingValue > 0.25 ){
@@ -62,11 +37,6 @@ const MapCountry = (props) => {
 
     color = colorMixer('#FF0000','#0085FF', comparingValue );
   }
-  // let color = colorMixer('#0085FF','#CCCCCC', comparingValue*4 );
-  // if( comparingValue > 0.25 ){
-  //   color = colorMixer('#FF0000','#0085FF', comparingValue*4-0.25);
-  // }
-
 
   let styleAdjustments = {
     left: position.left + '%',
@@ -97,7 +67,7 @@ const MapCountry = (props) => {
 
       <div className="MapCountry-HoverInfo">
         <div className="MapCountry-HoverInfo-Name">
-          {countryInfo.Country} <span className="MapCountry-HoverInfo-Year">({props.year})</span>
+          {countryInfo.Country} <span className="MapCountry-HoverInfo-Year">({props.year})</span> {(props.year===2025 ? (<span className="MapCountry-HoverInfo-Disclaimer">ass</span>) : null)}
         </div>
 
         <table className="MapCountry-HoverInfo-Table">
