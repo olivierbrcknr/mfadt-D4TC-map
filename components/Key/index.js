@@ -50,7 +50,7 @@ const MapKey = (props) => {
             The <b>color</b> inidcates the % of refugees relative to the population
           </p>
           <p>
-            <b style={{'color': '#0085FF'}}>blue</b> is approx. <b>2%</b>, <b style={{'color': '#FF0000'}}>red</b> is approx. <b>6%</b>
+            <b style={{'color': '#0085FF'}}>blue</b> is approx. <b>2%</b>, <b style={{'color': '#FF8A00'}}>orange</b> is approx. <b>6%</b>
           </p>
 
         </div>

@@ -11,17 +11,31 @@
   font-size: 13px;
 }
 
-
 .MapEqualizerToggle li {
   display: block;
   border-radius: 3px;
   padding: 2px 6px;
   cursor: pointer;
   color: var(--color-gray-med);
+  text-align: center;
 }
-
 
 .MapEqualizerToggle li.--isToggled {
   background: var(--color-highlight);
   color: var(--color-white);
+}
+
+
+/* mobile adjustments */
+@media (max-width: 460px ) {
+
+  .MapEqualizerToggle {
+    top: 42px;
+    width: 80vw;
+    font-size: 12px;
+  }
+  .MapEqualizerToggle li {
+    flex: 1;
+  }
+
 }

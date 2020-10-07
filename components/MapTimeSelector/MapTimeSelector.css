@@ -27,3 +27,14 @@
 .MapTimeSelector-year.--isSelected {
   color: var(--color-highlight) !important;
 }
+
+
+/* mobile adjustments */
+@media (max-width: 460px ) {
+  .MapTimeSelector {
+    font-size: 12px;
+  }
+  .MapTimeSelector-year {
+    padding: 4px 6px;
+  }
+}

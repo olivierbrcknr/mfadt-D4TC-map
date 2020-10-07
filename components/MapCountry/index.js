@@ -35,7 +35,7 @@ const MapCountry = (props) => {
 
     comparingValue = (comparingValue-0.25) / 0.75;
 
-    color = colorMixer('#FF0000','#0085FF', comparingValue );
+    color = colorMixer('#FF8A00','#0085FF', comparingValue );
   }
 
   let styleAdjustments = {

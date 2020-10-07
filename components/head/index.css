@@ -16,7 +16,8 @@ html, body {
 
 h1 {
   font-size: 32px;
-  font-weight: 500;
+  font-weight: 600;
+  line-height: 1.3;
 }
 h4 {
   font-family: var(--font-family-mono);
@@ -59,10 +60,12 @@ blockquote {
   padding: calc( var(--grid-unit) * 3 );
   max-width: 500px;
   width: calc( 100vw - 100vh );
+  min-width: 300px;
 }
 
 .description {
   line-height: 1.6;
+  margin-top: calc( var(--grid-unit) * 5 );
 }
 
 .description-source {
@@ -86,52 +89,30 @@ blockquote {
   text-indent: -16px;
   margin-left: 16px;
 }
-.sourceList li a {
+.sourceList a {
+  text-decoration: none;
+  display: block;
+}
+.sourceList li .sourceList-pseudoLink {
   word-wrap: break-word;
   white-space: pre-wrap;
+  text-decoration: underline;
 }
-
-#toggleInfo {
-  display: none;
-}
-
 
 /* mobile adjustments */
-@media (max-width: calc( 140vh) ) {
-
-  #toggleInfo {
-    display: block;
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: 101;
-  }
-
-  .essay {
-    position: fixed;
-    top: 0;
-    left: -500px;
-    bottom: 0;
-    width: 500px;
-    transition: all 0.5s;
-    background: var(--color-white);
-    z-index: 100;
-    overflow-y: scroll;
-  }
-
-  .--isShowingInfo .essay {
-    left: 0px;
-    box-shadow: 0px 0px 50px rgba(0,0,0,0.1);
-  }
-
+@media (max-width: 120vh ) {
   #wrapper {
-    transition: background 0.5s;
+    height: auto;
+    overflow-y: initial;
   }
-  .--isShowingInfo #wrapper {
-    background: #EEE;
+  .essay {
+    width: 100vw;
+    max-width: initial;
+    height: initial;
+    overflow: none;
+    max-width: initial;
+    min-width: initial;
   }
-
 }
-
 
 

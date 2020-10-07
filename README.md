@@ -1,8 +1,10 @@
 # The Refugee Crisis In Europe
 
-This repository is the submission for the Map assignment for the class "Design for this century" at [Parsons](http://parsons.edu/).
+This repository is the submission for the Map assignment for the course ["design for this century"](https://courses.newschool.edu/courses/PGTE5601) at [Parsons](http://parsons.edu/).
 
 It represents the conflict of refugees seeking asylum in Europe. → [Description](components/data/description.md)
+
+This project is built using [yarn](https://yarnpkg.com/). It uses the [next.js](https://nextjs.org/) framework.
 
 ## Calculations
 
@@ -24,7 +26,7 @@ For the GDP value in 2025, I used the mean of the growth factors of a country fr
 GDP = GDP in 2019 × Average GDP Growth of Country ^ 6 Years
 ```
 
-Find the relevant code [here](components/Map/index.js#L157-L181).
+Find the relevant code [here](components/Map/index.js#L195-L219).
 
 #### Population
 For the population, I used the same approach as with the GDP.
@@ -33,7 +35,7 @@ For the population, I used the same approach as with the GDP.
 Population = Population in 2019 × Population Growth of Country in 2019 ^ 6 Years
 ```
 
-Find the relevant code [here](components/Map/index.js#L144-L156).
+Find the relevant code [here](components/Map/index.js#L182-L194).
 
 #### Refugees
 For the refugees, I had to come up with an percentual growth. I decided for `5%` p.a. as this seems like a realistic number, looking at the previous years. Again this growth got multiplied with each country's number of 2019.

@@ -8,7 +8,7 @@
     180deg,
     #CCCCCC 0%,
     #0085FF 33.3%,
-    #FF0000 100%);
+    #FF8A00 100%);
 }
 
 
@@ -20,4 +20,11 @@
   right: calc(100% + 4px);
   transform: translateY(-50%);
   font-weight: bold;
+}
+
+@media (max-width: 460px ) {
+
+  .MapLegend {
+    top: calc( 160px + var(--grid-unit) * 4 );
+  }
 }

@@ -28,7 +28,9 @@ const Home = () => {
 
     return(
       <li key={'source-'+index}>
-        {source.author} ({source.year}). <i>{source.title}</i>{sourceType}. Accessed on {sourceDate} at <a href={source.link}>{source.link}</a>
+        <a href={source.link}>
+          {source.author} ({source.year}). <i>{source.title}</i>{sourceType}. Accessed on {sourceDate} at <span className="sourceList-pseudoLink">{source.link}</span>
+         </a>
       </li>
     )
   });
@@ -54,6 +56,8 @@ const Home = () => {
       <Head title="The Refugee Crisis In Europe" date="" />
 
       <div id="wrapper">
+
+        <DataVizMap />
 
         <section className="essay">
 
@@ -83,12 +87,6 @@ const Home = () => {
           </article>
 
         </section>
-
-        <DataVizMap />
-
-        <button id="toggleInfo" onClick={ () => setShowInfo(!showInfo) }>
-          Show Info
-        </button>
 
        </div>
 
