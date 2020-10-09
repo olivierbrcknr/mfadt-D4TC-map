@@ -54,7 +54,7 @@
   border: solid 1px var(--color-gray-med);
   border-top: none;
   height: 6px;
-  width: 10vh;
+  width: 9.5vh;
 }
 
 /* mobile adjustments */
@@ -85,6 +85,9 @@
   .DataVizMap {
     padding-top: 160px;
     height: calc( 100vw + 160px);
+  }
+  .DataVizMap-SizeLabel-Length {
+    width: 9.5vw;
   }
   .DataVizMap-Map {
     top: 160px;

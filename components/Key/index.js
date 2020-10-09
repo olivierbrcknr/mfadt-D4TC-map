@@ -83,7 +83,7 @@ const MapKey = (props) => {
         </div>
         <div className="MapKey-Point-Desc">
           <p>
-            Hover over a country to see the details
+            Hover over a country to see its details
           </p>
         </div>
       </div>

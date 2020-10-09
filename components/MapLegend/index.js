@@ -10,7 +10,7 @@ const MapLegend = (props) => {
 
   let maxVal = legendValues[legendValues.length-1];
 
-  let gradient = 'linear-gradient( 180deg';
+  let gradient = 'linear-gradient( 0deg';
 
   let displayValues = legendValues.map( (val,i) => {
 
@@ -18,7 +18,7 @@ const MapLegend = (props) => {
     gradient += ', ' + legendColors[i] + ' ' + fromTop;
 
     return (
-      <div key={'legend-label_'+val} className="MapLegend-Label" style={{top: fromTop}}>
+      <div key={'legend-label_'+val} className="MapLegend-Label" style={{bottom: fromTop}}>
         {(val===maxVal ? '>' : null)}{val}%
       </div>
     )

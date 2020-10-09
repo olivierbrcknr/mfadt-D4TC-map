@@ -27,7 +27,7 @@ const sourceList = [
     "publisher": "Telegraph",
     "location": "London, UK",
     "year": "2015-09-04",
-    "title": "Why do refugees and migrants come to Europe, and what must be done to ease the crisis?,",
+    "title": "Why do refugees and migrants come to Europe, and what must be done to ease the crisis?",
     "type": "",
     "accessed": "2020-09-20",
     "link": "http://www.telegraph.co.uk/news/worldnews/europe/11845205/Why-do-refugees-and-migrants-come-to-Europe-and-what-must-be-done-to-ease-the-crisis.html"
@@ -59,8 +59,8 @@ const sourceList = [
     "author": "Tamošauskas, Tadas",
     "publisher": "",
     "location": "",
-    "year": "",
-    "title": "",
+    "year": "n.d.",
+    "title": "Countries with their (ISO 3166-1) Alpha-2 code, Alpha-3 code, UN M49, average latitude and longitude",
     "type": "dataset",
     "accessed": "2020-09-22",
     "link": "https://gist.github.com/tadast/8827699#file-countries_codes_and_coordinates-csv"

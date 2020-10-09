@@ -25,11 +25,12 @@ const Home = () => {
 
     let sourceType = ( source.type ? ' ['+source.type+']' : null);
     let sourceDate = source.accessed; // needs to be adapted
+    let sourcePublisher = (source.publisher ? ', '+source.publisher : null);
 
     return(
       <li key={'source-'+index}>
         <a href={source.link}>
-          {source.author} ({source.year}). <i>{source.title}</i>{sourceType}. Accessed on {sourceDate} at <span className="sourceList-pseudoLink">{source.link}</span>
+          {source.author} ({source.year}). <i>{source.title}</i>{sourceType}{sourcePublisher}. Accessed on {sourceDate} at <span className="sourceList-pseudoLink">{source.link}</span>
          </a>
       </li>
     )

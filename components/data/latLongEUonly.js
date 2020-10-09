@@ -1,3 +1,7 @@
+// This file is generated out of the dataset from tadast
+// https://gist.github.com/tadast/8827699#file-countries_codes_and_coordinates-csv
+
+
 const countriesLatLong = [
   {
     "Country":"United Kingdom",
