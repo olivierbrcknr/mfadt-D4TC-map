@@ -99,6 +99,14 @@ blockquote {
   text-decoration: underline;
 }
 
+.gitHub {
+  font-family: var(--font-family-mono);
+  color: var(--color-gray-med);
+  font-size: 9px;
+  margin-top: calc( var(--grid-unit) * 3 );
+  line-height: 11px;
+}
+
 /* mobile adjustments */
 @media (max-width: 120vh ) {
   #wrapper {

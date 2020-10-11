@@ -15,7 +15,7 @@ The "adjusted distribution by GDP" is calculated taking into account the *GDP* o
 Refugees per Country = Total Number of Refugees × GDP ÷ Total GDP
 ```
 
-Find the relevant code [here](components/MapCountry/index.js#L26-L28).
+Find the relevant code [here](components/MapCountry/index.js#L27-L29).
 
 ### Predictions 2025
 

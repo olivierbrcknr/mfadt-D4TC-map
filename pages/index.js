@@ -85,6 +85,10 @@ const Home = () => {
               {sources}
             </ul>
 
+            <div className="gitHub">
+              → see the <a href="https://github.com/olivierbrcknr/mfadt-D4TC-map">source code at GitHub</a>
+            </div>
+
           </article>
 
         </section>
